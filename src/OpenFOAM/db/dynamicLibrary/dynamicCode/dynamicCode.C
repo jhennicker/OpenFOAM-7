@@ -60,11 +60,6 @@ void Foam::dynamicCode::checkSecurity
     const dictionary& dict
 )
 {
-    if (isAdministrator())
-    {
-       return false;
-    }
-
     if (!allowSystemOperations)
     {
         FatalIOErrorInFunction(dict)
